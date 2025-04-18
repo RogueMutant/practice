@@ -1,0 +1,22 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "Full-stack practice repo covering advanced CSS, Tailwind, Node.js, React, TypeScript, and more.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:name": "node cli-projects/file-cli/name.js",
+    "start:url-slicer": "node cli-projects/url-shortener/index.js",
+    "start:todo": "node cli-projects/Todo/todo.js",
+    "start:converter": "node cli-projects/currency-converter/currency.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "inquirer": "^12.5.2"
+  }
+}

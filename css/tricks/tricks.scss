@@ -1,0 +1,33 @@
+body {
+  height: 100vh;
+  padding: 1em;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+html {
+  scroll-behavior: smooth;
+}
+@mixin colStyl($colC: 0) {
+  container-type: inline-size;
+  column-count: $colC;
+  column-rule: 1px solid black;
+  column-gap: 2em;
+  max-width: 500px;
+  margin: 0 auto;
+
+  div {
+    background: linear-gradient(blue, yellow);
+    height: 200px;
+    width: 200px;
+  }
+  p {
+    margin-top: 10px;
+  }
+}
+
+main {
+  @include colStyl(2);
+}
+
+section {
+  @include colStyl(2);
+}

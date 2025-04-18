@@ -1,0 +1,45 @@
+good to know youjust apending more stuffjust apending more stuffjust apending more stuff
+just apending more stuff
+just apending more stuff
+just apending more stuff
+just apending more stuff
+just apending more stuff
+just apending more stuff
+just apending more stuff
+just apending more stuff
+just appending more stuff
+just appending more stuff\ni just made my first cli appi just added chalkChained content from run-all
+
+const path = path(proces.cwd, "cli-projects", "file.txt")
+const newdir = path(basedir, "cli-projects", "newdir")
+const newdir = path(basedir, "cli-projects", "newdir")
+aync (){
+    try{
+    await fs.read(path)
+    }catch(error){
+        conole.log(error)
+    }
+}
+aync (mesage){
+    try{
+    await fs.appendFile(path, message)
+    }catch(error){
+        conole.log(error)
+    }
+}
+
+aync (){
+    try{
+    await fs.mkdir(newdir)
+    }catch(error){
+        conole.log(error)
+    }
+}
+
+aync (){
+    try{
+    await fs.copyFile(path, )
+    }catch(error){
+        conole.log(error)
+    }
+}
