@@ -64,7 +64,7 @@ program
   .version("1.0.0");
 
 program.helpOption("-h, --HELP", "Display help for command");
-program.on("--HELP", () => {
+program.on("--help", () => {
   console.log(chalk.blue("Examples:"));
   console.log(chalk.blue("  $ url-shortener shorten <url>"));
   console.log(chalk.blue("  $ url-shortener getUrl <shortenedUrl>"));
@@ -83,6 +83,26 @@ program
   .description("Get the original URL from a shortened URL")
   .action(async (url) => {
     await getUrl(url);
+  });
+
+program
+  .command("allUrls")
+  .description("Get all URLs")
+  .action(async () => {
+    try {
+      const response = await getAllUrls();
+      if (response) {
+        const allUrls = [
+          ...(response.originalUrls || []),
+          ...(response.shortenedUrls || []),
+        ];
+        console.log(chalk.green("All URLs: "), allUrls);
+      } else {
+        console.log(chalk.yellow("No URLs found."));
+      }
+    } catch (error) {
+      console.error(chalk.red(`Error fetching URLs: ${error.message}`));
+    }
   });
 
 program.parse(process.argv);
