@@ -27,13 +27,18 @@ const convertCurrency = async (from, to, amount) => {
     );
 
     const data = await response.json();
-
+    const convertedAmount = data.conversion_result;
     if (!response.ok || data.result === "error") {
       console.error(chalk.red("Error Type:"), data["error-type"]);
       return;
     }
 
-    console.log(chalk.green("Converted Amount:"), data.conversion_result);
+    console.log(
+      chalk.rgb(199, 45, 109)(amount) + " " + from,
+      "=",
+      chalk.rgb(199, 45, 109)(convertedAmount) + " " + to,
+      convertedAmount
+    );
   } catch (error) {
     console.error(chalk.red("Network Error:"), error.message);
   }
@@ -57,8 +62,19 @@ const supportedCodes = async () => {
 
 program
   .name("Currency Converter")
-  .description("A cli tool to convert currencies")
-  .version("1.0.0");
+  .description(
+    "A CLI tool to convert currencies using real-time exchange rates."
+  )
+  .version("1.0.0")
+  .addHelpText(
+    "afterAll",
+    `
+Examples:
+  $ currency-converter convert USD EUR 100
+  $ currency-converter codes
+  $ currency-converter prompt
+    `
+  );
 
 program
   .command("convert <from> <to> <amount>")
