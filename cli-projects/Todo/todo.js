@@ -4,6 +4,7 @@ import { Command } from "commander";
 import { createTask } from "./commands/add.js";
 import { listTodos } from "./commands/list.js";
 import { updateTask } from "./commands/complete.js";
+import { deleteTask } from "./commands/delete.js";
 
 const program = new Command();
 
@@ -14,7 +15,12 @@ const todoPrompt = async () => {
         type: "list",
         name: "question",
         message: "What do you want to do?",
-        choices: ["Create a new task", "Update a task", "Get all tasks"],
+        choices: [
+          "Create a new task",
+          "Update a task",
+          "Get all tasks",
+          "Delete a task",
+        ],
       },
     ]);
     console.log(question);
@@ -69,6 +75,22 @@ const todoPrompt = async () => {
         ]);
         await listTodos();
         break;
+      case "Delete a task":
+        let { deleteTask } = await inquirer.prompt([
+          {
+            type: "input",
+            name: "deleteTask",
+            message: "what task will you be deleting?",
+            validate: (input) => {
+              if (input === "" || !isNaN(input)) {
+                return "please enter a valid task name";
+              }
+              return true;
+            },
+          },
+        ]);
+        await deleteTask(deleteTask.toLowerCase());
+        break;
       default:
         console.log("select something");
         break;
@@ -120,6 +142,14 @@ program
   .action(async (taskName) => {
     console.log(chalk.greenBright("Updating task..."));
     await updateTask(taskName.toLowerCase());
+  });
+
+program
+  .command("delete <taskName>")
+  .description("Command to delete a task")
+  .action(async (taskName) => {
+    console.log(chalk.greenBright("deleting task..."));
+    await deleteTask(taskName.toLowerCase());
   });
 
 program.parse(process.argv);
