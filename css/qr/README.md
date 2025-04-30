@@ -5,12 +5,13 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ## Overview
 
 ### Screenshot
+
 ![Mobile_Layout](.css\qr\mobile screenshot.png)
 ![Desktop_Layout](.css\qr\desktop screenshot.png)
 
 ### Links
 
-- Link Ro Repo: https://github.com/RogueMutant/practice/tree/main/css/qr
+- Link To Repo: https://github.com/RogueMutant/practice/tree/main/css/qr
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ### Built with

@@ -1,0 +1,94 @@
+@import "_fonts.scss";
+// @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+$border-rad: 12px;
+$bg-clr: hsl(47, 88%, 63%);
+body {
+  background: $bg-clr;
+  font-family: "Figtree", sans-serif;
+  height: 100vh;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  place-content: center;
+
+  .card {
+    max-height: calc(100vh - 35%);
+    min-height: fit-content;
+    max-width: 300px;
+    margin: 0 auto;
+    border: 2px solid hsl(0, 0%, 7%);
+    padding: 1em;
+    border-radius: $border-rad;
+    box-shadow: 10px 10px hsl(0, 0%, 0%);
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 7%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    figure {
+      width: 100%;
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: $border-rad;
+      }
+    }
+    .card-content {
+      display: grid;
+      grid-template: auto 1fr auto / 1fr;
+      gap: 1em;
+
+      .card-header {
+        p:first-child {
+          font-size: 1em;
+          width: fit-content;
+          margin-bottom: 10px;
+          padding: 0.5em;
+          border-radius: 5px;
+          background: $bg-clr;
+          font-weight: 700;
+        }
+        p:last-child {
+          font-weight: 600;
+        }
+      }
+      .card-body {
+        h2 {
+          color: hsl(0, 0%, 7%);
+          font-size: 1.2em;
+          font-weight: 900;
+          margin-bottom: 0.7em;
+        }
+        p {
+          color: hsl(0, 0%, 42%);
+          font-size: 0.78em;
+          font-weight: 600;
+          line-height: 1.6;
+        }
+      }
+      .card-footer {
+        display: flex;
+        align-items: center;
+        img {
+          width: 2em;
+          height: 25px;
+          object-fit: contain;
+          margin-right: 0.3em;
+        }
+        span {
+          font-size: small;
+          font-weight: 900;
+        }
+      }
+    }
+  }
+}

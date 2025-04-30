@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Figtree";
+  src: url(./assets/fonts/Figtree-VariableFont_wght.ttf) format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: hsl(47, 88%, 63%);
+  font-family: "Figtree", sans-serif;
+  height: 100vh;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  place-content: center;
+}
+main .card {
+  max-height: calc(100vh - 35%);
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  max-width: 300px;
+  margin: 0 auto;
+  border: 2px solid hsl(0, 0%, 7%);
+  padding: 1em;
+  border-radius: 12px;
+  box-shadow: 10px 10px hsl(0, 0%, 0%);
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 7%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+main .card figure {
+  width: 100%;
+}
+main .card figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+main .card .card-content {
+  display: grid;
+  grid-template: auto 1fr auto/1fr;
+  gap: 1em;
+}
+main .card .card-content .card-header p:first-child {
+  font-size: 1em;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 10px;
+  padding: 0.5em;
+  border-radius: 5px;
+  background: hsl(47, 88%, 63%);
+  font-weight: 700;
+}
+main .card .card-content .card-header p:last-child {
+  font-weight: 600;
+}
+main .card .card-content .card-body h2 {
+  color: hsl(0, 0%, 7%);
+  font-size: 1.2em;
+  font-weight: 900;
+  margin-bottom: 0.7em;
+}
+main .card .card-content .card-body p {
+  color: hsl(0, 0%, 42%);
+  font-size: 0.78em;
+  font-weight: 600;
+  line-height: 1.6;
+}
+main .card .card-content .card-footer {
+  display: flex;
+  align-items: center;
+}
+main .card .card-content .card-footer img {
+  width: 2em;
+  height: 25px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 0.3em;
+}
+main .card .card-content .card-footer span {
+  font-size: small;
+  font-weight: 900;
+}/*# sourceMappingURL=styles.css.map */
