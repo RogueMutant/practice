@@ -67,6 +67,10 @@ main {
           font-size: 1.2em;
           font-weight: 900;
           margin-bottom: 0.7em;
+          &:hover {
+            color: darken(hsl(47, 88%, 63%), 5%);
+            transition: all 0.3s ease-in-out;
+          }
         }
         p {
           color: hsl(0, 0%, 42%);
@@ -87,6 +91,10 @@ main {
         span {
           font-size: small;
           font-weight: 900;
+          &:hover {
+            color: hsl(47, 88%, 63%);
+            transition: all 0.3s ease-in-out;
+          }
         }
       }
     }

@@ -71,6 +71,10 @@ main .card .card-content .card-body h2 {
   font-weight: 900;
   margin-bottom: 0.7em;
 }
+main .card .card-content .card-body h2:hover {
+  color: #f2c936;
+  transition: all 0.3s ease-in-out;
+}
 main .card .card-content .card-body p {
   color: hsl(0, 0%, 42%);
   font-size: 0.78em;
@@ -91,4 +95,8 @@ main .card .card-content .card-footer img {
 main .card .card-content .card-footer span {
   font-size: small;
   font-weight: 900;
+}
+main .card .card-content .card-footer span:hover {
+  color: hsl(47, 88%, 63%);
+  transition: all 0.3s ease-in-out;
 }/*# sourceMappingURL=styles.css.map */
