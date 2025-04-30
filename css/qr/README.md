@@ -5,6 +5,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ## Overview
 
 ### Screenshot
+<<<<<<< HEAD
 
 ![Mobile_Layout](.css\qr\mobile screenshot.png)
 ![Desktop_Layout](.css\qr\desktop screenshot.png)
@@ -13,6 +14,14 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 - Link To Repo: https://github.com/RogueMutant/practice/tree/main/css/qr
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+=======
+![Mobile Layout](mobile_screenshot.png)
+![Desktop Layout](desktop_screenshot.png)
+
+### Links
+
+- Link Ro Repo: https://github.com/RogueMutant/practice/tree/main/css/qr
+>>>>>>> 5ff52ec2f081700f409963db4482326c316426cc
 
 ### Built with
 
