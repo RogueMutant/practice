@@ -5,9 +5,8 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ## Overview
 
 ### Screenshot
-
-css\qr\mobile screenshot.png
-css\qr\desktop screenshot.png
+![Mobile_Layout](.css\qr\mobile screenshot.png)
+![Desktop_Layout](.css\qr\desktop screenshot.png)
 
 ### Links
 
