@@ -3,26 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/qr/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link
       rel="shortcut icon"
-      href="./css/qr/images/favicon-32x32.png"
+      href="/css/preview-card/assets/images/favicon-32x32.png"
       type="image/x-icon"
     />
+    <title>Preview-card-blog</title>
   </head>
   <body>
-    <main class="container">
-      <figure>
-        <img src="./css/qr/images/image-qr-code.png" alt="qr code image" />
-      </figure>
-      <div class="text-container">
-        <h1>Improve your front-end skills by building projects</h1>
-        <p>
-          Scan the QR code to visit Frontend Mentor and take your coding skills
-          to the next level
-        </p>
-      </div>
+    <main>
+      <article class="card">
+        <figure>
+          <img
+            src="/css/preview-card/assets/images/illustration-article.svg"
+            alt=""
+          />
+        </figure>
+        <div class="card-content">
+          <div class="card-header">
+            <p>Learning</p>
+            <p>Published 21 Dec 2023</p>
+          </div>
+          <div class="card-body">
+            <h2>HTML & CSS foundations</h2>
+            <p>
+              These languages are the backbone of every website, defining
+              structure, content, and presentation.
+            </p>
+          </div>
+          <div class="card-footer">
+            <img
+              src="/css/preview-card/assets/images/image-avatar.webp"
+              alt="Author Image"
+            />
+            <span>Greg Hooper</span>
+          </div>
+        </div>
+      </article>
     </main>
   </body>
 </html>

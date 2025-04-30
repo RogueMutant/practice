@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- Link To Repo: [My repo url](ttps://github.com/RogueMutant/practice/tree/main/css/preview-card)
-- Live Site URL: [Add solution URL here](https://your-solution-url.com)
+- Link To Repo: [My repo url](https://github.com/RogueMutant/practice/tree/main/css/preview-card)
+- Live Site URL: [solution URL](https://your-solution-url.com)
 
 ### Built with
 
