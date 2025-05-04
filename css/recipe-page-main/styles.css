@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf") format("truetype-variations");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+}
+@font-face {
+  font-family: "Young Serif";
+  src: url("./assets/fonts/young-serif/YoungSerif-VariableFont_wght.ttf") format("truetype-variations");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background: hsl(30, 54%, 90%);
+  height: 100vh;
+  font-size: 16px;
+  place-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  background: hsl(0, 0%, 100%);
+  max-width: 750px;
+  border-radius: 10px;
+}
+.container .recipe-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+.container .recipe-page div > p {
+  font-size: 1.05em;
+  color: hsl(30, 10%, 34%);
+  line-height: 1.6;
+}
+.container .recipe-page div h1,
+.container .recipe-page h3 {
+  font-family: "Young Serif", serif;
+}
+.container .recipe-page div h3 {
+  color: hsl(14, 45%, 36%);
+  margin-top: 1em;
+  font-size: 1.5em;
+}
+.container .recipe-page div h1 {
+  color: hsl(24, 5%, 18%);
+  font-size: 2em;
+}
+.container .recipe-page figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .recipe-page .recipe-content {
+  width: 100%;
+  height: inherit;
+  padding: 2em;
+}
+.container .recipe-page .recipe-content .pink-cont {
+  padding: 0.5em 2em;
+  background: hsl(330, 100%, 98%);
+  font-size: 0.9em;
+}
+.container .recipe-page .recipe-content .pink-cont h3 {
+  font-family: "Outfit", sans-serif;
+}
+.container .recipe-page .recipe-content .pink-cont p {
+  color: hsl(332, 51%, 32%);
+}
+.container .recipe-page .recipe-content .header {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.container .recipe-page .recipe-content .content {
+  border-top: 1px solid hsl(30, 18%, 87%);
+  padding-bottom: 2em;
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+.container .recipe-page .recipe-content .footer p {
+  margin-top: 1em;
+}
+.container .recipe-page .recipe-content .footer table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+.container .recipe-page .recipe-content .footer table tr {
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+  text-align: center;
+}
+.container .recipe-page .recipe-content .footer table td {
+  padding: 1em 0;
+  color: hsl(30, 10%, 34%);
+  line-height: 1.6;
+}
+.container .recipe-page .recipe-content .footer table td:nth-child(even) {
+  color: hsl(14, 45%, 36%);
+  font-weight: bold;
+}
+.container .recipe-page .recipe-content div .list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.container .recipe-page .recipe-content div .list-container ul,
+.container .recipe-page .recipe-content div .list-container ol {
+  list-style: disc;
+  padding-left: 1.3em;
+  margin: 0;
+  line-height: 1.6;
+}
+.container .recipe-page .recipe-content div .list-container ul li,
+.container .recipe-page .recipe-content div .list-container ol li {
+  margin-bottom: 0.8em;
+  padding-left: 0.8em;
+}
+.container .recipe-page .recipe-content div .list-container ul li span,
+.container .recipe-page .recipe-content div .list-container ol li span {
+  font-weight: bold;
+  padding-right: 0.5em;
+}
+.container .recipe-page .recipe-content div .list-container ol {
+  list-style-type: decimal;
+}
+
+@media screen and (min-width: 500px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1em;
+  }
+  .container .recipe-page .recipe-content .footer table tr {
+    text-align: left;
+  }
+  .container .recipe-page .recipe-content .footer table tr td {
+    padding-left: 2em;
+  }
+}
+@media screen and (min-width: 900px) {
+  .container {
+    margin: 20px auto;
+    padding: 2em;
+  }
+  .container .recipe-page .recipe-content {
+    padding: 2em 0;
+  }
+}/*# sourceMappingURL=styles.css.map */
