@@ -43,6 +43,7 @@ main {
       text-align: center;
       h2 {
         margin-bottom: $brd-radius;
+        font-size: clamp(1em, 2vw + 1em, 2em);
         span {
           font-weight: 300;
         }
@@ -58,7 +59,7 @@ main {
       width: 100%;
       p {
         margin-top: 0.5em;
-        font-size: 0.9em;
+        font-size: clamp(0.8em, 1vw + 0.6em, 1em);
         font-weight: 400;
       }
 
@@ -100,6 +101,9 @@ main {
       padding: 1em 2em;
       .header {
         width: 50%;
+        h2 {
+          font-size: 2em;
+        }
       }
       gap: 20px;
       .content {

@@ -39,6 +39,7 @@ main section .header {
 }
 main section .header h2 {
   margin-bottom: 0.8em;
+  font-size: clamp(1em, 2vw + 1em, 2em);
 }
 main section .header h2 span {
   font-weight: 300;
@@ -53,7 +54,7 @@ main section .content {
 }
 main section .content p {
   margin-top: 0.5em;
-  font-size: 0.9em;
+  font-size: clamp(0.8em, 1vw + 0.6em, 1em);
   font-weight: 400;
 }
 main section .content .card {
@@ -90,6 +91,9 @@ main section .content .card:nth-child(4) {
   }
   main section .header {
     width: 50%;
+  }
+  main section .header h2 {
+    font-size: 2em;
   }
   main section .content {
     display: grid;
