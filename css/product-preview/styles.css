@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  place-content: center;
+  height: 100%;
+  width: 100%;
+  background: hsl(30, 38%, 92%);
+  padding: 1.5em;
+}
+main .product-preview-section {
+  display: grid;
+  grid-template-columns: auto-fit;
+  justify-content: center;
+  border-radius: 10px;
+  background: white;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  height: calc(100vh - 40%);
+  max-width: 900px;
+  margin: 0 auto;
+}
+main .product-preview-section figure {
+  background: url(./images/image-product-mobile.jpg) no-repeat center;
+  background-size: cover;
+  height: 250px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+main .product-preview-section .product-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1.5em;
+}
+main .product-preview-section .product-preview span,
+main .product-preview-section .product-preview p {
+  color: hsl(228, 12%, 48%);
+  font-size: clamp(1em, 1vw + 0.8em, 1.3em);
+  line-height: 1.6;
+}
+main .product-preview-section .product-preview h1 {
+  color: hsl(158, 42%, 18%);
+  font-size: clamp(1.5em, 2vw + 1.5em, 5em);
+  font-weight: bold;
+  font-family: "Fraunces", serif;
+}
+main .product-preview-section .product-preview p:first-child {
+  letter-spacing: 5px;
+}
+main .product-preview-section .product-preview .price p {
+  color: hsl(158, 36%, 37%);
+  font-size: clamp(1.5em, 2vw + 1.5em, 2.3em);
+  font-family: "Fraunces", serif;
+  letter-spacing: normal;
+}
+main .product-preview-section .product-preview .price span {
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+  font-size: 0.4em;
+  vertical-align: super;
+  margin-left: 10px;
+  letter-spacing: normal;
+}
+main .product-preview-section .product-preview .price button {
+  background: hsl(158, 36%, 37%);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+main .product-preview-section .product-preview .price button span {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+main .product-preview-section .product-preview .price button:hover {
+  background: hsl(158, 42%, 18%);
+}
+
+@media (min-width: 550px) {
+  main .product-preview-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main .product-preview-section figure {
+    background: url(./images/image-product-desktop.jpg) no-repeat center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0;
+  }
+  main .product-preview-section .product-preview {
+    gap: 20px;
+    padding: 2em;
+  }
+  main .product-preview-section .product-preview p {
+    line-height: 1.8;
+    font-weight: 500;
+  }
+  main .product-preview-section .product-preview .price button {
+    padding: 1.5em 2.1em;
+    margin-top: 10px;
+  }
+}/*# sourceMappingURL=styles.css.map */
