@@ -1,6 +1,6 @@
-# Frontend Mentor - Blog preview card solution
+# Frontend Mentor - Four card feature section solution
 
-This is a solution to the [Blog preview card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Four card feature section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -23,15 +23,20 @@ Users should be able to:
 
 ### Screenshot
 
+![mobile](./mobile.png)
+![desktop](./desktop_screenshot.png)
+
 ### Links
 
-- Link To Repo: [My repo url](https://github.com/RogueMutant/practice/tree/main/css/preview-card)
+- Link To Repo: [My repo url](https://github.com/RogueMutant/practice/tree/main/css/four-card)
 - Live Site URL: [solution URL](https://roguemutant.github.io/practice/)
 
 ### Built with
 
 - Semantic HTML5 markup
 - Flexbox
+- Grid
+- Media queries
 - Mobile-first workflow
 
 ## Author
