@@ -21,7 +21,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ### Links
 
 - Link To Repo: https://github.com/RogueMutant/practice/tree/main/css/recipe-page
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here]( https://roguemutant.github.io/practice/)
 
 ### Built with
 
