@@ -33,4 +33,24 @@ section {
   @include colStyl(2);
 }
 
-========================================
+============== tailwind shorts =============
+width{
+w-3xs
+width: var(--container-3xs); /* 16rem (256px) */
+w-2xs
+width: var(--container-2xs); /* 18rem (288px) */
+w-xs
+width: var(--container-xs); /* 20rem (320px) */
+w-sm
+width: var(--container-sm); /* 24rem (384px) */
+w-md
+width: var(--container-md); /* 28rem (448px) */
+w-lg
+width: var(--container-lg); /* 32rem (512px) */
+w-xl
+width: var(--container-xl); /* 36rem (576px) */
+
+  <fraction>
+  full (100%)
+  screen(100vw)
+}
