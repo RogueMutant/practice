@@ -6,19 +6,13 @@ import editIcon from "./assets/edit.svg";
 import trashIcon from "./assets/trash.svg";
 import chkBox from "./assets/empty-checkbox.svg";
 import chkBoxFill from "./assets/fill-checkbox.svg";
-import addNote from "./assets/add-note-illustration.svg";
 import Progress from "./components/progress";
 import Btn from "./components/btn";
 import Card from "./components/card";
 import Modal from "./components/modal";
+import type { colorString, task } from "./custom";
+import NotFound from "./components/notFound";
 
-type task = {
-  title: string;
-  description: string;
-  date: string;
-  category: string;
-  completed: boolean;
-};
 function App() {
   const [hideModal, setHideModal] = useState(false);
   const [hideProgress, setHideProgress] = useState(false);
@@ -26,7 +20,9 @@ function App() {
   const [filter, setFilter] = useState<task[]>([]);
   const [search, setSearch] = useState("");
   const [error, setError] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<colorString>("all");
   const [editingTask, setEditingTask] = useState<task | null>(null);
+  const [openHint, setOpenHint] = useState<string | null>(null);
 
   const addTask = (newTask: {
     title: string;
@@ -70,29 +66,28 @@ function App() {
 
   const searchTask = (str: string) => {
     if (!str) {
-      console.log("empty search");
+      setError(false);
       return setFilter(tasks);
     }
     if (typeof str === "string") {
       const filteredTask = tasks.filter((t) => str === t.title);
       setFilter(filteredTask);
-      console.log("search");
+      setError(filteredTask.length === 0); // <-- set error if no results
       return;
     }
-
-    setError(false);
+    setError(true);
   };
 
-  const filterTask = (
-    category: "all" | "personal" | "work" | "home" = "all"
-  ) => {
+  const filterTask = (category: colorString = "all") => {
     if (category === "all") {
       setFilter(tasks);
     } else {
       const filteredTask = tasks.filter((task) => category === task.category);
       setFilter(filteredTask);
     }
+    setActiveCategory(category);
   };
+
   useEffect(() => {
     setFilter(tasks);
   }, [tasks]);
@@ -119,7 +114,11 @@ function App() {
               }}
             />
           </header>
-          <p className={`${error ? "block" : "hidden"} text-red-600`}>
+          <p
+            className={`${
+              error ? "block" : "hidden"
+            } absolute top-28 text-red-600`}
+          >
             No such task
           </p>
           <main className="h-3/4 w-full border-red-60050">
@@ -128,30 +127,32 @@ function App() {
                 <Btn
                   text="All"
                   onClick={() => filterTask("all")}
+                  active={activeCategory === "all"}
                   colors="all"
                 />
                 <Btn
                   text="Home"
                   onClick={() => filterTask("home")}
+                  active={activeCategory === "home"}
                   colors="home"
                 />
                 <Btn
                   text="Personal"
                   onClick={() => filterTask("personal")}
+                  active={activeCategory === "personal"}
                   colors="personal"
                 />
                 <Btn
                   text="Work"
                   onClick={() => filterTask("work")}
+                  active={activeCategory === "work"}
                   colors="work"
                 />
               </div>
               <div>
                 <Btn
                   text="Add Note"
-                  onClick={() => {
-                    setHideModal(true);
-                  }}
+                  onClick={() => setHideModal(true)}
                   imgSrc={[plusIcon]}
                   colors="all"
                 />
@@ -173,13 +174,15 @@ function App() {
                   } else {
                     addTask(newTask);
                   }
-                  setHideModal(false);
                   setHideProgress(true);
+                  setHideModal(false);
                 }}
                 task={editingTask}
               />
             )}
-            {hideProgress && <Progress total={total} completed={complete} />}
+            {hideProgress && tasks.length > 0 && (
+              <Progress total={total} completed={complete} />
+            )}
             <section className="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2 relative">
               {filter.length > 0 ? (
                 filter.map((task, index) => (
@@ -201,16 +204,16 @@ function App() {
                     onEdit={() => editing(task)}
                     onChck={() => checking(task)}
                     onDelete={() => del(task.title)}
+                    showHint={openHint === task.title}
+                    onShowHint={() => setOpenHint(task.title)}
+                    onCloseHint={() => setOpenHint(null)}
                   />
                 ))
-              ) : (
-                <div className="absolute my-5 size-full items-center gap-20 flex flex-col">
-                  <h2 className="text-2xl sm:text-3xl size-full text-[#00000099] text-center">
-                    You don't have any notes
-                  </h2>
-                  <img src={addNote} alt="no image icon" />
-                </div>
-              )}
+              ) : error ? (
+                <NotFound emptySearch={true} noTask={false} />
+              ) : tasks.length === 0 ? (
+                <NotFound emptySearch={false} noTask={true} />
+              ) : null}
             </section>
           </main>
         </section>

@@ -54,7 +54,7 @@ const Modal = ({ onClose, onSubmitTask, task }: modalProps) => {
   }, [task]);
   return (
     <section className="backdrop-blur-sm w-full h-full absolute z-10 top-0 left-0">
-      <div className="bg-white w-1/2 h-1/2 flex flex-col items-center justify-start mx-auto my-10">
+      <div className="bg-white sm:w-2/3 sm:h-1/2 w-3/4 h-1/2 flex flex-col items-center justify-start mx-auto mt-40">
         <header className="border-b px-4 py-2 w-full flex items-center">
           <h1 className="text-lg font-bold">Add Note</h1>
         </header>
