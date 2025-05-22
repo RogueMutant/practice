@@ -1,4 +1,5 @@
 # practice
+
 Full-stack practice repo covering advanced CSS, Tailwind, Node.js, React, TypeScript, and more.
 
 # 🔧 Fullstack Dev Practice Hub
@@ -18,7 +19,6 @@ This repo is organized by tech topics and contains hands-on mini projects, exper
 - **JWT & OAuth** – Auth flows using JSON Web Tokens and third-party providers.
 - **React** – Component-based frontend projects.
 - **Next.js** – Fullstack React framework (with 3 project builds).
-- **Vue + Vite** – Lightweight SPA builds and Vue basics.
 - **cURL** – Testing and working with HTTP requests in the terminal.
 - **Hosting** – Deploying with Vercel, Netlify, and others.
 
@@ -26,19 +26,17 @@ This repo is organized by tech topics and contains hands-on mini projects, exper
 
 ## 📁 Folder Structure
 
-
 ---
 
 ## 🛠️ Projects I'm Building
 
-| Type        | Projects                                      |
-|-------------|-----------------------------------------------|
+| Type        | Projects                                     |
+| ----------- | -------------------------------------------- |
 | CSS         | Flip card, Image gallery, Custom UI elements |
-| CLI         | File organizer, Weather fetcher, TODO CLI     |
-| Node.js API | Auth API with JWT, Book catalog API           |
-| React       | Todo App, Movie Search App                    |
-| Next.js     | Blog, E-commerce front, Portfolio site        |
-| Vue         | Notes app, Dashboard UI                       |
+| CLI         | File organizer, Weather fetcher, TODO CLI    |
+| Node.js API | Auth API with JWT, Book catalog API          |
+| React       | Todo App, Movie Search App                   |
+| Next.js     | Blog, E-commerce front, Portfolio site       |
 
 ---
 
@@ -56,4 +54,3 @@ This repo is organized by tech topics and contains hands-on mini projects, exper
 This repo is for **learning and exploration**, so some folders might contain quick tests or rough drafts. Finalized projects may be moved into their own public repos later on.
 
 ---
-
